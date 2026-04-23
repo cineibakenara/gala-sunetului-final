@@ -10,14 +10,14 @@ function App() {
   const [eventData, setEventData] = useState(null);
 
 useEffect(() => {
-    // Am adaugat /api/event-info la finalul link-ului
-    fetch(`https://gala-sunetului-final-production.up.railway.app/api/event-info`)
+    // Am adaugat /api/event-info la finalul link-ului tau
+    fetch('https://gala-sunetului-final-production.up.railway.app/api/event-info')
       .then(response => {
-        if (!response.ok) throw new Error("Eroare la incarcarea datelor");
+        if (!response.ok) throw new Error("Serverul nu raspunde corect");
         return response.json();
       })
       .then(data => setEventData(data))
-      .catch(error => console.error("Eroare fetch:", error));
+      .catch(error => console.error("Eroare la incarcare:", error));
   }, []);
   const scrollToTop = () => {
     setTimeout(() => {
