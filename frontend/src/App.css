@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #000000;
+  --text-main: #f4f4f4;
+  --text-muted: #aaaaaa;
+  --gold: #d4af37;
+  --gold-hover: #f5cc3d;
+  --border-dark: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--gold);
+  font-size: 24px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #000000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-dark);
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--gold);
+  margin-left: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+section {
+  padding: 120px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  scroll-margin-top: 100px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: var(--gold);
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#prezentare {
+  text-align: center;
+  padding-top: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 64px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.event-details {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 30px 0;
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-item span {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.detail-item strong {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.program-box {
+  background-color: #111;
+  padding: 40px;
+  border: 1px solid var(--border-dark);
+}
+
+.program-box h3 {
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-dark);
+  padding-bottom: 10px;
+}
+
+.program-item {
+  margin-bottom: 20px;
+}
+
+.program-item strong {
+  color: var(--text-main);
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.program-item p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid var(--border-dark);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 50px;
+}
+
+#despre-noi {
+  min-height: 80vh;
+  padding-top: 150px;
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.team-member {
+  background-color: #0a0a0a;
+  border: 1px solid var(--border-dark);
+  padding: 30px;
+  border-left: 4px solid var(--gold);
+}
+
+.team-member h3 {
+  font-size: 20px;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.team-member .role {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.sponsors-section {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 20px;
+  background-color: #000000;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.sponsors-section .section-subtitle {
+  font-size: 28px;
+  color: var(--gold);
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sponsor-item-simple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo-simple {
+  height: 110px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 60px;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.btn-instagram {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-instagram:hover {
+  background-color: var(--gold);
+  color: #000000;
+}
+
+.contact-details {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+}
+
+.contact-details strong {
+  color: var(--gold);
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.contact-details a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-details a:hover {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  section {
+    padding: 240px 20px 60px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .event-details {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 0;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  #despre-noi {
+    padding-top: 240px;
+  }
+
+  .sponsor-logo-simple {
+    height: 70px;
+    max-width: 180px;
+  }
+  
+  .sponsors-grid {
+    gap: 30px;
+  }
+}
