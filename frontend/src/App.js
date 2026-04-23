@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const serverIp = window.location.hostname;
-    fetch(`http://${serverIp}:5000/api/event-info`)
+    fetch(`https://gala-sunetului-final-production.up.railway.app/`)
       .then(response => response.json())
       .then(data => setEventData(data))
       .catch(error => console.error(error));
