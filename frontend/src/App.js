@@ -9,14 +9,16 @@ import './App.css';
 function App() {
   const [eventData, setEventData] = useState(null);
 
-  useEffect(() => {
-    const serverIp = window.location.hostname;
-    fetch(`https://gala-sunetului-final-production.up.railway.app/`)
-      .then(response => response.json())
+useEffect(() => {
+    // Am adaugat /api/event-info la finalul link-ului
+    fetch(`https://gala-sunetului-final-production.up.railway.app/api/event-info`)
+      .then(response => {
+        if (!response.ok) throw new Error("Eroare la incarcarea datelor");
+        return response.json();
+      })
       .then(data => setEventData(data))
-      .catch(error => console.error(error));
+      .catch(error => console.error("Eroare fetch:", error));
   }, []);
-
   const scrollToTop = () => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
